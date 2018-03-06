@@ -1,5 +1,6 @@
 package blog2018;
 
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +45,21 @@ public class Blog {
     
     public Comment lastComment()
     {
-        
+        List<Comment> allComments = new ArrayList();
+        For(Note note : notes)
+        {
+            allComments.addAll(note.getComments());
+        }
+        Coment result = allComments.get(0);
+        for(Comment comment : allComments)
+        {
+            LocalDate d1 = comment.getDate();
+            LocalDate d2 = comment.getDate();
+            if(d1.isAfter(d2))
+            {
+                result = comment;
+            }
+        }
         return null;
     }
     public List<Comment> lastComments()

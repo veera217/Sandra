@@ -31,4 +31,8 @@ public class Note {
    public int numberOfComments() {
        return comments.size();
     }
+
+    Iterable<Comment> getComments() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -1,5 +1,8 @@
 package blog2018;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class NewMain {
 
     public static void main(String[] args) {
@@ -15,6 +18,17 @@ public class NewMain {
         Comment c2 = new Comment("qwerty","No coś ty, bardzo łatwe");
         note2.add(c2);
         System.out.println(blog);
+        System.out.println("-------");
+        System.out.println(blog.mostPopular());
+        System.out.println("-------");
+        LocalDate d1 = LocalDate.of(2018, Month.MARCH, 1);
+        LocalDate d2 = LocalDate.of(2018, Month.FEBRUARY, 2);
+        long u = d1.until(d2,ChronoUnit.MINUTES);
+        System.out.println(u);
+        long u = d2.until(d1,ChronoUnit.MINUTES);
+        System.out.println(u2);
+        System.out.println("-------");
+        System.out.println(blog.lastComment());
     }
     
 }
