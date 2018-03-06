@@ -21,4 +21,34 @@ public class Blog {
     {
         return title + "\n\n"+notes;
     }
+     public Note mostPopular()
+    {
+        if(notes.isEmpty()) return null;
+        Note result = notes.get(0);
+        for(Note note : notes)
+        {
+           int count =  note.numberOfComments();
+           if(count>result.numberOfComments())
+           {
+               result = note;
+           }
+        }
+        return result;
+        
+    }
+    public List<Note> mostPopulars()
+    {
+        
+        return null;
+    }
+    
+    public Comment lastComment()
+    {
+        
+        return null;
+    }
+    public List<Comment> lastComments()
+    {
+        return null;
+    }
 }
