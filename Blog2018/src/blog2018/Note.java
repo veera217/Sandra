@@ -27,4 +27,8 @@ public class Note {
         sb.append("\n");
         return sb.toString();
     }
+
+   public int numberOfComments() {
+       return comments.size();
+    }
 }
