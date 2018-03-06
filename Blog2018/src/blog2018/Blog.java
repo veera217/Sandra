@@ -60,7 +60,7 @@ public class Blog {
                 result = comment;
             }
         }
-        return null;
+        return result;
     }
     public List<Comment> lastComments()
     {
