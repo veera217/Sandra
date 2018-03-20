@@ -1,6 +1,7 @@
 package blog2018;
 
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.temporal.ChronoUnit;
 
 public class NewMain {
@@ -23,7 +24,7 @@ public class NewMain {
         System.out.println("-------");
         LocalDate d1 = LocalDate.of(2018, Month.MARCH, 1);
         LocalDate d2 = LocalDate.of(2018, Month.FEBRUARY, 2);
-        long u = d1.until(d2,ChronoUnit.MINUTES);
+        long u = d1.until(d2,ChronoUnit.DATES);
         System.out.println(u);
         long u = d2.until(d1,ChronoUnit.MINUTES);
         System.out.println(u2);
